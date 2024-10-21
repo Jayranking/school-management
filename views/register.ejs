@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <title>Register</title>
+    <%- include('./snippet/header.ejs') %>
+  </head>
+  <body>
+  
+    <%- include('./snippet/navbar.ejs') %>
+
+    <div class="container-fluid">
+      <div class="row">
+        <%- include('./snippet/sidebar.ejs') %>
+
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="mt-5 registration_page">
+                <div class="col-md-8 mx-auto">
+                    <div class="registerSection shadow">
+                        <div class="registration">
+                            <h3>Register Account</h3>
+                            <div class="indicators">
+                                <span class="line"><span></span></span>
+                                <p class="active">1</p>
+                                <p>2</p>
+                                <p>3</p>
+                            </div> 
+                            <form class="registerForm" enctype="multipart/form-data">
+                                <!-- Student Information -->
+                                <div class="tab show">
+                                    <h4>Student Information</h4>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" name="studentName" placeholder="Full Name" id="studentName">
+                                                <div class="fullnameError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" name="regNo" placeholder="Registration Number" id="regNo">
+                                                <div class="reg_noError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <input type="email" id="studentEmail" name="studentEmail" class="form-control" placeholder="Email">
+                                                <div class="emailError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <input type="tel" class="form-control" name="studentPhone_no" placeholder="Phone Number" id="studentPhone_no">
+                                                <div class="phoneError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <select name="gender" id="gender" class="form-select">
+                                                    <option value="">Select Gender</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                </select>
+                                                <div class="genderError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <!-- Academic Information -->
+                                <div class="tab">
+                                    <h4>Academic Information</h4>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <select name="faculty" id="faculty" class="form-select">
+                                                    <option value="">Select Faculty</option>
+                                                    <option value="Physical science">Physical Science</option>
+                                                    <option value="Humanities">Humanities</option>
+                                                    <option value="Engineering">Engineering</option>
+                                                </select>
+                                                <div class="facultyError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <select name="dept" id="dept" class="form-select">
+                                                    <option value="">Select Department</option>
+                                                    <option value="Computer science">Computer Science</option>
+                                                    <option value="English Language">English Language</option>
+                                                    <option value="Civil Engineering">Civil Engineering</option>
+                                                </select>
+                                                <div class="deptError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <select name="level" id="level" class="form-select">
+                                                    <option value="">Select Level</option>
+                                                    <option value="100">100</option>
+                                                    <option value="200">200</option>
+                                                    <option value="300">300</option>
+                                                    <option value="400">400</option>
+                                                    <option value="500">500</option>
+                                                </select>
+                                                <div class="levelError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <!-- Parent Information -->
+                                <div class="tab">
+                                    <h4>Parent Information</h4>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" name="parentName" placeholder="Parent's Full Name" id="parentName">
+                                                <div class="sponsorFullNameError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <input type="email" id="parentEmail" name="parentEmail" class="form-control" placeholder="Parent's Email">
+                                                <div class="sponsorEmailError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <input type="tel" class="form-control" name="parentPhone_no" placeholder="Parent's Phone Number" id="parentPhone_no">
+                                                <div class="sponsorPhoneError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="mb-3">
+                                                <select name="parentGender" id="parentGender" class="form-select">
+                                                    <option value="">Select Gender</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                </select>
+                                                <div class="sponsorGenderError errorDiv"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <!-- Navigation Buttons -->
+                                <div class="registerBtn mt-3">
+                                    <button type="button" class="prev">Previous</button>
+                                    <button type="button" class="next">Next</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+          
+        </main>
+      </div>
+    </div>
+
+
+    <script src="/js/form.js"></script>
+    <%- include('./snippet/scripts.ejs') %>
+    </body>
+</html>

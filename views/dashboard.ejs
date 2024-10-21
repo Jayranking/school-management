@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <title>Dashboard</title>
+    <%- include('./snippet/header.ejs') %>
+  </head>
+  <body>
+  
+    <%- include('./snippet/navbar.ejs') %>
+
+    <div class="container-fluid">
+      <div class="row">
+        <%- include('./snippet/sidebar.ejs') %>
+
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Dashboard</h1>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <div class="card shadow bg-primary text-white p-4">
+                <div class="card-body">
+                  <h4 class="fw-bold">Total users</h4>
+                  <h5 class="fw-bold text-end">1</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card shadow bg-success text-white p-4">
+                <div class="card-body">
+                  <h4 class="fw-bold">Total Memo sent</h4>
+                  <h5 class="fw-bold text-end">0</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </main>
+      </div>
+    </div>
+
+
+
+    <%- include('./snippet/scripts.ejs') %>
+    </body>
+</html>

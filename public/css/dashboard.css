@@ -1,0 +1,205 @@
+.bi {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+
+/*
+ * Sidebar
+ */
+
+@media (min-width: 768px) {
+  .sidebar .offcanvas-lg {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 48px;
+  }
+  .navbar-search {
+    display: block;
+  }
+}
+
+.sidebar .nav-link {
+  font-size: .875rem;
+  font-weight: 500;
+}
+
+.sidebar .nav-link.active {
+  color: #2470dc;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+}
+
+body{
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 14px; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+}
+
+/* .registration_page, .login_page{
+    padding-top: 120px;
+    height: 100vh;
+    background: url(../image/Reg_banner.jpg);
+    background-position: center;
+    background-size: cover;
+}  */
+
+.registration_page::before, .login_page::before{
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     /* background-color: rgba(15, 128, 104, 0.589); */
+     top: 0;
+     left: 0;
+}
+.registerSection, .loginSection{
+     border: 1px solid #dddddde1;
+     padding: 20px;
+     position: relative;
+     border-radius: 5px;
+}
+.registration, .login{
+     background-color: white;
+     padding: 20px;
+     border-radius: 10px;
+}
+
+.registration h3{
+     font-size: 25px;
+     font-weight: 600;
+     text-align: center;
+     margin-bottom: 30px;
+}
+
+.indicators{
+     position: relative;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 25px;
+}
+
+.indicators .line{
+     position: absolute;
+     height: 3px;
+     width: 100%;
+     background-color: #ddd;
+     left: 0;
+     top: 40%;
+     transform: translateY(-50);
+     z-index: 10;
+    
+}
+.indicators .line span{
+     position: absolute;
+     height: 100%;
+     top: 0;
+     left: 0;
+     width: 0;
+     background-color: green;
+}
+.indicators p{
+     position: relative;
+     z-index: 20;
+     width: 40px;
+     height: 40px;
+     border: 4px solid #ddd;
+     background-color: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     transition: .3s;
+}
+
+.indicators p.active{
+     border-color: rgb(6, 182, 6);
+     color: rgb(6, 182, 6);
+}
+
+.registerForm .tab{
+     display: none;
+}
+
+.registerForm .tab.show{
+     display: block;
+}
+
+.registerForm .tab input:focus{
+     box-shadow: none;
+     border-color: rgb(6, 182, 6);
+}
+
+.errorDiv{
+     font-size: 14px;
+     font-weight: 500;
+     color: rgb(238, 5, 5);
+     margin: 5px 0 0 10px ;
+}
+.registerBtn{
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+}
+.registerBtn button{
+     padding: 10px 30px;
+     margin-left: 10px;
+     border: none;
+     outline: none ;
+     cursor: pointer;
+}
+
+.registerBtn button.prev{
+     background-color: #eee;
+}
+.registerBtn  button.next{
+     background-color: rgb(6, 182, 6);
+     color: white;
+}
+.haveAccount p a{
+     text-decoration: none;
+     color: darkred;
+     font-weight: 600;
+}
+
+.haveAccount p a:hover{
+     color: rgb(6, 182, 6);
+}
+
+.haveAccount .hide{
+     display: none;
+}
+
+@media (max-width:767px){
+     .registration_page{
+          padding-top: 100px;
+          height: 100vh;
+      }
+      
+}

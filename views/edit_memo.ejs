@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <title>Edit Memo</title>
+    <%- include('./snippet/header.ejs') %>
+  </head>
+  <body>
+  
+    <%- include('./snippet/navbar.ejs') %>
+
+    <div class="container-fluid">
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mx-auto">
+            <div class="container mt-5">
+                <div class="col-md-10 mx-auto">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="mb-4 text-center">Edit Memo</h5>
+                            <% if (context.memoById) { %>
+                                <form id="memoForm">
+                                    <div class="form-group mb-3">
+                                        <input type="text" class="form-control" value="<%= context.memoById.memoTitle %>" name="memoTitle" placeholder="Enter title">
+                                        <div class="memoTitleErr text-center text-danger"></div>
+                                    </div>
+                            
+                                    <div class="form-group mb-3">
+                                         <input type="text" class="form-control" value="<%= context.memoById.memoRef %>" name="memoRef" placeholder="Enter reference">
+                                         <div class="memoRefErr text-center text-danger"></div>
+                                    </div>
+                            
+                                    <div class="form-group">
+                                        <textarea class="form-control" value="<%= context.memoById.memoBody %>"  name="memoBody" rows="8" placeholder="Enter memo content"></textarea>
+                                        <div class="memoBodyErr text-center text-danger"></div>
+                                    </div>
+                                    <input type="hidden" name="memoId" value="<%= context.memoById._id %>">
+                                    <!-- Submit Button -->
+                                     <div class="text-center mt-4">
+                                        <button type="submit" class="btn btn-outline-primary">Submit</button>
+                                     </div>
+                                </form>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <%- include('./snippet/scripts.ejs') %>
+    <script src="/js/memo.js"></script>
+    </body>
+</html>
